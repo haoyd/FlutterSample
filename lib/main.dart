@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'controller/StateWidgetPage.dart';
 import 'controller/ThemePage.dart';
 
 void main() => runApp(MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       home: new SampleAppPage(),
       routes: <String, WidgetBuilder> {
         'ThemePage': (BuildContext context) => new ThemePage(),
+        'StateWidgetPage': (BuildContext context) => new StateWidgetPage(),
       },
     );
   }
@@ -47,6 +49,11 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("ThemePage", () {
       Navigator.of(context).pushNamed('ThemePage');
     }));
+
+    widgets.add(_getListItem("StateWidgetPage", () {
+      Navigator.of(context).pushNamed('StateWidgetPage');
+    }));
+
 
     return widgets;
   }
