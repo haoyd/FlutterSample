@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
+import 'dart:io';
 
 class HttpPage extends StatelessWidget {
   @override
@@ -10,9 +12,18 @@ class HttpPage extends StatelessWidget {
         title: new Text("Http请求示例"),
       ),
       body: new Center(
-        child: new RaisedButton(
-          onPressed: _httpRequest,
-          child: new Text("发起Http请求"),
+        child: new Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            new RaisedButton(
+                onPressed: _httpRequest,
+                child: new Text("Http请求网络"),
+            ),
+            new RaisedButton(
+                onPressed: _httpClientRequest,
+                child: new Text("HttpClient请求网络"),
+            ),
+          ],
         ),
       ),
     );
@@ -24,5 +35,18 @@ class HttpPage extends StatelessWidget {
       print("状态码：${response.statusCode}");
       print("正文：${response.body}");
     });
+  }
+
+  _httpClientRequest() async {
+    try {
+      HttpClient httpClient = new HttpClient();
+      HttpClientRequest request = await httpClient.getUrl(Uri.parse("http://www.baidu.com"))
+      HttpClientResponse response = await request.close();
+      var result = await response.transform(utf8.decoder).join();
+      print(result);
+      httpClient.close();
+    }catch (e) {
+      print("请求失败: $e");
+    }
   }
 }
