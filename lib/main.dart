@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'controller/TestPage.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -12,6 +14,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: new SampleAppPage(),
+      routes: <String, WidgetBuilder> {
+        'TestPage': (BuildContext context) => new TestPage(),
+      },
     );
   }
 }
@@ -30,22 +35,29 @@ class _SampleAppPageState extends State<SampleAppPage> {
       appBar: new AppBar(
         title: new Text("Sample App"),
       ),
-      body: new ListView(children: _getListData()),
+      body: new ListView(
+          children: _getListData()
+      ),
     );
   }
 
   _getListData() {
     List<Widget> widgets = [];
-    for (int i = 0; i < 100; i++) {
-      widgets.add(new GestureDetector(
-        child: new Padding(
-            padding: new EdgeInsets.all(20.0),
-            child: new Text("Row $i")),
-        onTap: () {
-          print('row tapped $i');
-        },
-      ));
-    }
+
+    widgets.add(_getListItem("TestPage", () {
+      Navigator.of(context).pushNamed('TestPage');
+    }));
+
     return widgets;
+  }
+
+  _getListItem(String title, GestureTapCallback tapGesture) {
+    return new GestureDetector(
+      child: new Padding(
+          padding: new EdgeInsets.all(20.0),
+          child: new Text(title)
+      ),
+      onTap: tapGesture,
+    );
   }
 }
