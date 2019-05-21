@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import 'controller/StateWidgetPage.dart';
 import 'controller/ThemePage.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -52,6 +54,11 @@ class _SampleAppPageState extends State<SampleAppPage> {
 
     widgets.add(_getListItem("StateWidgetPage", () {
       Navigator.of(context).pushNamed('StateWidgetPage');
+    }));
+
+    widgets.add(_getListItem("打开百度", () {
+      const url = 'https://www.baidu.com';
+      launch(url);
     }));
 
 
