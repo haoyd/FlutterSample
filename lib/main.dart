@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'controller/TestPage.dart';
+import 'controller/ThemePage.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       ),
       home: new SampleAppPage(),
       routes: <String, WidgetBuilder> {
-        'TestPage': (BuildContext context) => new TestPage(),
+        'ThemePage': (BuildContext context) => new ThemePage(),
       },
     );
   }
@@ -44,8 +44,8 @@ class _SampleAppPageState extends State<SampleAppPage> {
   _getListData() {
     List<Widget> widgets = [];
 
-    widgets.add(_getListItem("TestPage", () {
-      Navigator.of(context).pushNamed('TestPage');
+    widgets.add(_getListItem("ThemePage", () {
+      Navigator.of(context).pushNamed('ThemePage');
     }));
 
     return widgets;
