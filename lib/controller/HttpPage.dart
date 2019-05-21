@@ -40,7 +40,7 @@ class HttpPage extends StatelessWidget {
   _httpClientRequest() async {
     try {
       HttpClient httpClient = new HttpClient();
-      HttpClientRequest request = await httpClient.getUrl(Uri.parse("http://www.baidu.com"))
+      HttpClientRequest request = await httpClient.getUrl(Uri.parse("http://www.baidu.com"));
       HttpClientResponse response = await request.close();
       var result = await response.transform(utf8.decoder).join();
       print(result);
