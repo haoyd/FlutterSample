@@ -5,6 +5,7 @@ import 'controller/ContainerPage.dart';
 import 'controller/HttpPage.dart';
 import 'controller/ImagePage.dart';
 import 'controller/StateWidgetPage.dart';
+import 'controller/TextPage.dart';
 import 'controller/ThemePage.dart';
 
 
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         'HttpPage': (BuildContext context) => new HttpPage(),
         'ContainerPage': (BuildContext context) => new ContainerPage(),
         'ImagePage': (BuildContext context) => new ImagePage(),
+        'TextPage': (BuildContext context) => new TextPage(),
       },
     );
   }
@@ -54,42 +56,32 @@ class _SampleAppPageState extends State<SampleAppPage> {
   _getListData() {
     List<Widget> widgets = [];
 
-    widgets.add(_getListItem("ThemePage", () {
-      Navigator.of(context).pushNamed('ThemePage');
-    }));
-
-    widgets.add(_getListItem("StateWidgetPage", () {
-      Navigator.of(context).pushNamed('StateWidgetPage');
-    }));
-
-    widgets.add(_getListItem("打开百度", () {
+    widgets.add(_getListItem("UrlPage", () {
       const url = 'https://www.baidu.com';
       launch(url);
     }));
 
-    widgets.add(_getListItem("Http请求", () {
-      Navigator.of(context).pushNamed('HttpPage');
-    }));
-
-    widgets.add(_getListItem("容器", () {
-      Navigator.of(context).pushNamed('ContainerPage');
-    }));
-
-    widgets.add(_getListItem("图片", () {
-      Navigator.of(context).pushNamed('ImagePage');
-    }));
-
+    widgets.add(_getListItem("ThemePage"));
+    widgets.add(_getListItem("StateWidgetPage"));
+    widgets.add(_getListItem("HttpPage"));
+    widgets.add(_getListItem("ContainerPage"));
+    widgets.add(_getListItem("TextPage"));
 
     return widgets;
   }
 
-  _getListItem(String title, GestureTapCallback tapGesture) {
+  _getListItem([String page, GestureTapCallback tapGesture]) {
     return new GestureDetector(
       child: new Padding(
-          padding: new EdgeInsets.all(20.0),
-          child: new Text(title)
+          padding: new EdgeInsets.all(15.0),
+          child: new Text(page)
       ),
-      onTap: tapGesture,
+      onTap: tapGesture ?? () {
+        if (page == null) {
+          return;
+        }
+        Navigator.of(context).pushNamed(page);
+      },
     );
   }
 }
