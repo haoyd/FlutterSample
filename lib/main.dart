@@ -5,6 +5,7 @@ import 'controller/ContainerPage.dart';
 import 'controller/HttpPage.dart';
 import 'controller/IconsPage.dart';
 import 'controller/ImagePage.dart';
+import 'controller/ListViewPage.dart';
 import 'controller/RaisedButtonPage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         'TextPage': (BuildContext context) => new TextPage(),
         'IconsPage': (BuildContext context) => new IconsPage(),
         'RaisedButtonPage': (BuildContext context) => new RaisedButtonPage(),
+        'ListViewPage': (BuildContext context) => new ListViewPage(),
       },
     );
   }
@@ -72,6 +74,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("TextPage"));
     widgets.add(_getListItem("IconsPage"));
     widgets.add(_getListItem("RaisedButtonPage"));
+    widgets.add(_getListItem("ListViewPage"));
 
     return widgets;
   }
