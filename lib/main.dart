@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_sample/view/widget/ToastUtil.dart';
 
 import 'controller/ContainerPage.dart';
+import 'controller/FormPage.dart';
 import 'controller/HttpPage.dart';
 import 'controller/IconsPage.dart';
 import 'controller/ImagePage.dart';
@@ -34,6 +36,7 @@ class MyApp extends StatelessWidget {
         'IconsPage': (BuildContext context) => new IconsPage(),
         'RaisedButtonPage': (BuildContext context) => new RaisedButtonPage(),
         'ListViewPage': (BuildContext context) => new ListViewPage(),
+        'FormPage': (BuildContext context) => new FormPage(),
       },
     );
   }
@@ -75,16 +78,15 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("IconsPage"));
     widgets.add(_getListItem("RaisedButtonPage"));
     widgets.add(_getListItem("ListViewPage"));
+    widgets.add(_getListItem("FormPage"));
 
     return widgets;
   }
 
   _getListItem([String page, GestureTapCallback tapGesture]) {
-    return new GestureDetector(
-      child: new Padding(
-          padding: new EdgeInsets.all(15.0),
-          child: new Text(page)
-      ),
+    return ListTile(
+      leading: Icon(Icons.widgets),
+      title: Text(page),
       onTap: tapGesture ?? () {
         if (page == null) {
           return;
