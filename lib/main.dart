@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'controller/ContainerPage.dart';
 import 'controller/HttpPage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/ThemePage.dart';
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
         'ThemePage': (BuildContext context) => new ThemePage(),
         'StateWidgetPage': (BuildContext context) => new StateWidgetPage(),
         'HttpPage': (BuildContext context) => new HttpPage(),
+        'ContainerPage': (BuildContext context) => new ContainerPage(),
       },
     );
   }
@@ -66,6 +68,12 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("Http请求", () {
       Navigator.of(context).pushNamed('HttpPage');
     }));
+
+    widgets.add(_getListItem("容器", () {
+      Navigator.of(context).pushNamed('ContainerPage');
+    }));
+
+
 
     return widgets;
   }
