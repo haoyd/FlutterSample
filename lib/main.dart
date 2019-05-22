@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'controller/ContainerPage.dart';
 import 'controller/HttpPage.dart';
+import 'controller/IconsPage.dart';
 import 'controller/ImagePage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         'ContainerPage': (BuildContext context) => new ContainerPage(),
         'ImagePage': (BuildContext context) => new ImagePage(),
         'TextPage': (BuildContext context) => new TextPage(),
+        'IconsPage': (BuildContext context) => new IconsPage(),
       },
     );
   }
@@ -66,6 +68,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("HttpPage"));
     widgets.add(_getListItem("ContainerPage"));
     widgets.add(_getListItem("TextPage"));
+    widgets.add(_getListItem("IconsPage"));
 
     return widgets;
   }
