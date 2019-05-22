@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'controller/ContainerPage.dart';
 import 'controller/HttpPage.dart';
+import 'controller/ImagePage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/ThemePage.dart';
 
@@ -24,6 +25,7 @@ class MyApp extends StatelessWidget {
         'StateWidgetPage': (BuildContext context) => new StateWidgetPage(),
         'HttpPage': (BuildContext context) => new HttpPage(),
         'ContainerPage': (BuildContext context) => new ContainerPage(),
+        'ImagePage': (BuildContext context) => new ImagePage(),
       },
     );
   }
@@ -73,6 +75,9 @@ class _SampleAppPageState extends State<SampleAppPage> {
       Navigator.of(context).pushNamed('ContainerPage');
     }));
 
+    widgets.add(_getListItem("图片", () {
+      Navigator.of(context).pushNamed('ImagePage');
+    }));
 
 
     return widgets;
