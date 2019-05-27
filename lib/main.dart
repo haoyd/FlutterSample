@@ -4,6 +4,7 @@ import 'package:flutter_sample/view/widget/ToastUtil.dart';
 
 import 'controller/ContainerPage.dart';
 import 'controller/FormPage.dart';
+import 'controller/HorizontalListPage.dart';
 import 'controller/HttpPage.dart';
 import 'controller/IconsPage.dart';
 import 'controller/ImagePage.dart';
@@ -36,6 +37,7 @@ class MyApp extends StatelessWidget {
         'IconsPage': (BuildContext context) => new IconsPage(),
         'RaisedButtonPage': (BuildContext context) => new RaisedButtonPage(),
         'ListViewPage': (BuildContext context) => new ListViewPage(),
+        'HorizontalListPage': (BuildContext context) => new HorizontalListPage(),
         'FormPage': (BuildContext context) => new FormPage(),
       },
     );
@@ -78,6 +80,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("IconsPage"));
     widgets.add(_getListItem("RaisedButtonPage"));
     widgets.add(_getListItem("ListViewPage"));
+    widgets.add(_getListItem("HorizontalListPage"));
     widgets.add(_getListItem("FormPage"));
 
     return widgets;
