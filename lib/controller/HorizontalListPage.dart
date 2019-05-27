@@ -8,9 +8,12 @@ class HorizontalListPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('横向滑动列表'),
       ),
-      body: ListView(
-        scrollDirection: Axis.horizontal,
-        children: _getListItems(),
+      body: Container(
+        height: 150,
+        child:  ListView(
+          scrollDirection: Axis.horizontal,
+          children: _getListItems(),
+        ),
       ),
     );
   }
@@ -20,8 +23,7 @@ class HorizontalListPage extends StatelessWidget {
 
     for (var i = 0; i < 50; i++) {
       widgets.add(Container(
-        width: 200.0,
-        height: 100.0,
+        width: 150.0,
         color: i % 2 == 0 ? Colors.blue : Colors.red,
         child: Center(
           child: Text('index : $i'),
