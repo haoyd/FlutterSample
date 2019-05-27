@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_sample/utils/PageUtil.dart';
 
 import 'AppbarPage.dart';
+import 'BottomNavigationBarPage.dart';
 
 class MaterialListPage extends StatelessWidget {
 
@@ -20,6 +21,7 @@ class MaterialListPage extends StatelessWidget {
     List<Widget> widgets = [];
 
     widgets.add(_getListItem("AppbarPage", AppbarPage()));
+    widgets.add(_getListItem("BottomNavigationBarPage", BottomNavigationBarPage()));
 
     return widgets;
   }
