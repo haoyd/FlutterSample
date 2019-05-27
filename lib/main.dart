@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'controller/ContainerPage.dart';
 import 'controller/FormPage.dart';
+import 'controller/GridViewPage.dart';
 import 'controller/HorizontalListPage.dart';
 import 'controller/HttpPage.dart';
 import 'controller/IconsPage.dart';
@@ -39,6 +40,7 @@ class MyApp extends StatelessWidget {
         'ListViewPage': (BuildContext context) => new ListViewPage(),
         'HorizontalListPage': (BuildContext context) => new HorizontalListPage(),
         'LongListPage': (BuildContext context) => new LongListPage(),
+        'GridViewPage': (BuildContext context) => new GridViewPage(),
         'FormPage': (BuildContext context) => new FormPage(),
       },
     );
@@ -83,6 +85,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("ListViewPage"));
     widgets.add(_getListItem("HorizontalListPage"));
     widgets.add(_getListItem("LongListPage"));
+    widgets.add(_getListItem("GridViewPage"));
     widgets.add(_getListItem("FormPage"));
 
     return widgets;
