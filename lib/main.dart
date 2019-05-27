@@ -14,6 +14,7 @@ import 'controller/RaisedButtonPage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
 import 'controller/ThemePage.dart';
+import 'controller/materials/AppbarPage.dart';
 
 
 void main() => runApp(MyApp());
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         'LongListPage': (BuildContext context) => new LongListPage(),
         'GridViewPage': (BuildContext context) => new GridViewPage(),
         'FormPage': (BuildContext context) => new FormPage(),
+        'AppbarPage': (BuildContext context) => new AppbarPage(),
       },
     );
   }
@@ -87,6 +89,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("LongListPage"));
     widgets.add(_getListItem("GridViewPage"));
     widgets.add(_getListItem("FormPage"));
+    widgets.add(_getListItem("AppbarPage"));
 
     return widgets;
   }

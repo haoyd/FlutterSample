@@ -10,7 +10,7 @@ class ToastUtil {
     Fluttertoast.showToast(
         msg: msg,
         toastLength: Toast.LENGTH_SHORT,
-        gravity: ToastGravity.CENTER,
+        gravity: ToastGravity.BOTTOM,
         timeInSecForIos: 2,
         backgroundColor: Color.fromARGB(120, 0, 0, 0),
         textColor: Colors.white,
