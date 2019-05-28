@@ -3,6 +3,7 @@ import 'package:flutter_sample/utils/PageUtil.dart';
 
 import 'AppbarPage.dart';
 import 'BottomNavigationBarPage.dart';
+import 'ButtonPage.dart';
 import 'DrawerPage.dart';
 import 'TabPage.dart';
 import 'TabPage2.dart';
@@ -28,6 +29,7 @@ class MaterialListPage extends StatelessWidget {
     widgets.add(_getListItem("TabPage", TabPage()));
     widgets.add(_getListItem("TabPage2", TabPage2()));
     widgets.add(_getListItem("DrawerPage", DrawerPage()));
+    widgets.add(_getListItem("ButtonPage", ButtonPage()));
 
     return widgets;
   }
