@@ -14,6 +14,7 @@ import 'controller/RaisedButtonPage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
 import 'controller/ThemePage.dart';
+import 'controller/cupertinos/CupertinoListPage.dart';
 import 'controller/materials/AppbarPage.dart';
 import 'controller/materials/MaterialListPage.dart';
 
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         'FormPage': (BuildContext context) => new FormPage(),
         'AppbarPage': (BuildContext context) => new AppbarPage(),
         'MaterialListPage': (BuildContext context) => new MaterialListPage(),
+        'CupertinoListPage': (BuildContext context) => new CupertinoListPage(),
       },
     );
   }
@@ -93,6 +95,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("FormPage"));
     widgets.add(_getListItem("AppbarPage"));
     widgets.add(_getListItem("MaterialListPage"));
+    widgets.add(_getListItem("CupertinoListPage"));
 
     return widgets;
   }
