@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_sample/utils/PageUtil.dart';
 
+import 'CupertinoButtonPage.dart';
 import 'CupertinoDialogPage.dart';
 import 'CupertinoLoadingPage.dart';
 
@@ -21,6 +22,7 @@ class CupertinoListPage extends StatelessWidget {
 
     widgets.add(_getListItem("CupertinoLoadingPage", CupertinoLoadingPage()));
     widgets.add(_getListItem("CupertinoDialogPage", CupertinoDialogPage()));
+    widgets.add(_getListItem("CupertinoButtonPage", CupertinoButtonPage()));
 
     return widgets;
   }
