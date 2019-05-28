@@ -8,6 +8,7 @@ import 'controller/HorizontalListPage.dart';
 import 'controller/HttpPage.dart';
 import 'controller/IconsPage.dart';
 import 'controller/ImagePage.dart';
+import 'controller/LayoutPage.dart';
 import 'controller/ListViewPage.dart';
 import 'controller/LongListPage.dart';
 import 'controller/RaisedButtonPage.dart';
@@ -48,6 +49,7 @@ class MyApp extends StatelessWidget {
         'AppbarPage': (BuildContext context) => new AppbarPage(),
         'MaterialListPage': (BuildContext context) => new MaterialListPage(),
         'CupertinoListPage': (BuildContext context) => new CupertinoListPage(),
+        'LayoutPage': (BuildContext context) => new LayoutPage(),
       },
     );
   }
@@ -96,6 +98,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("AppbarPage"));
     widgets.add(_getListItem("MaterialListPage"));
     widgets.add(_getListItem("CupertinoListPage"));
+    widgets.add(_getListItem("LayoutPage"));
 
     return widgets;
   }
