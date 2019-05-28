@@ -39,35 +39,6 @@ class ButtonPage extends StatelessWidget {
                 showSnackBar('canceled');
               },
             ),
-            SimpleDialog(
-              title: const Text('简单对话框'),
-              children: <Widget>[
-                SimpleDialogOption(
-                  onPressed: (){},
-                  child: const Text('item 1'),
-                ),
-                SimpleDialogOption(
-                  onPressed: (){},
-                  child: const Text('item 2'),
-                ),
-              ],
-            ),
-            AlertDialog(
-              title: Text('标题'),
-              content: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  RaisedButton (
-                    onPressed: () {},
-                    child: Text('确定'),
-                  ),
-                  RaisedButton (
-                    onPressed: () {},
-                    child: Text('取消'),
-                  ),
-                ],
-              )
-            )
           ],
         ),
       ),
