@@ -16,6 +16,7 @@ import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
 import 'controller/ThemePage.dart';
 import 'controller/cupertinos/CupertinoListPage.dart';
+import 'controller/jump/JumpOrignPage.dart';
 import 'controller/materials/AppbarPage.dart';
 import 'controller/materials/MaterialListPage.dart';
 
@@ -50,6 +51,7 @@ class MyApp extends StatelessWidget {
         'MaterialListPage': (BuildContext context) => new MaterialListPage(),
         'CupertinoListPage': (BuildContext context) => new CupertinoListPage(),
         'LayoutPage': (BuildContext context) => new LayoutPage(),
+        'JumpOrignPage': (BuildContext context) => new JumpOrignPage(),
       },
     );
   }
@@ -100,6 +102,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("MaterialListPage"));
     widgets.add(_getListItem("CupertinoListPage"));
     widgets.add(_getListItem("LayoutPage"));
+    widgets.add(_getListItem("JumpOrignPage"));
 
     return widgets;
   }
