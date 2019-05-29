@@ -87,6 +87,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("StateWidgetPage"));
     widgets.add(_getListItem("HttpPage"));
     widgets.add(_getListItem("ContainerPage"));
+    widgets.add(_getListItem("ImagePage"));
     widgets.add(_getListItem("TextPage"));
     widgets.add(_getListItem("IconsPage"));
     widgets.add(_getListItem("RaisedButtonPage"));
