@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'controller/AnimationPage.dart';
 import 'controller/ContainerPage.dart';
 import 'controller/FormPage.dart';
 import 'controller/GridViewPage.dart';
@@ -54,6 +55,7 @@ class MyApp extends StatelessWidget {
         'LayoutPage': (BuildContext context) => new LayoutPage(),
         'JumpOrignPage': (BuildContext context) => new JumpOrignPage(),
         'OpacityPage': (BuildContext context) => new OpacityPage(),
+        'AnimationPage': (BuildContext context) => new AnimationPage(),
       },
     );
   }
@@ -106,6 +108,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("LayoutPage"));
     widgets.add(_getListItem("JumpOrignPage"));
     widgets.add(_getListItem("OpacityPage"));
+    widgets.add(_getListItem("AnimationPage"));
 
     return widgets;
   }
