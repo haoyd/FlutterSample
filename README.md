@@ -5,4 +5,5 @@ Flutter Sample
 
 * Flutter 基础组件使用方法
 * Material 组件使用方法
-* Flutter 布局方法使用示例
+* Cupertino 组件使用方法
+* Flutter 布局排版使用示例
