@@ -11,6 +11,7 @@ import 'controller/ImagePage.dart';
 import 'controller/LayoutPage.dart';
 import 'controller/ListViewPage.dart';
 import 'controller/LongListPage.dart';
+import 'controller/OpacityPage.dart';
 import 'controller/RaisedButtonPage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
@@ -52,6 +53,7 @@ class MyApp extends StatelessWidget {
         'CupertinoListPage': (BuildContext context) => new CupertinoListPage(),
         'LayoutPage': (BuildContext context) => new LayoutPage(),
         'JumpOrignPage': (BuildContext context) => new JumpOrignPage(),
+        'OpacityPage': (BuildContext context) => new OpacityPage(),
       },
     );
   }
@@ -103,6 +105,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("CupertinoListPage"));
     widgets.add(_getListItem("LayoutPage"));
     widgets.add(_getListItem("JumpOrignPage"));
+    widgets.add(_getListItem("OpacityPage"));
 
     return widgets;
   }
