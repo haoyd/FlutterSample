@@ -13,6 +13,7 @@ import 'controller/LayoutPage.dart';
 import 'controller/ListViewPage.dart';
 import 'controller/LongListPage.dart';
 import 'controller/OpacityPage.dart';
+import 'controller/PageJumpAnimationPage.dart';
 import 'controller/RaisedButtonPage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
@@ -56,6 +57,7 @@ class MyApp extends StatelessWidget {
         'JumpOrignPage': (BuildContext context) => new JumpOrignPage(),
         'OpacityPage': (BuildContext context) => new OpacityPage(),
         'AnimationPage': (BuildContext context) => new AnimationPage(),
+        'PageJumpAnimationPage': (BuildContext context) => new PageJumpAnimationPage(),
       },
     );
   }
@@ -109,6 +111,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("JumpOrignPage"));
     widgets.add(_getListItem("OpacityPage"));
     widgets.add(_getListItem("AnimationPage"));
+    widgets.add(_getListItem("PageJumpAnimationPage"));
 
     return widgets;
   }
