@@ -51,7 +51,6 @@ class MyApp extends StatelessWidget {
         'LongListPage': (BuildContext context) => new LongListPage(),
         'GridViewPage': (BuildContext context) => new GridViewPage(),
         'FormPage': (BuildContext context) => new FormPage(),
-
         'AppbarPage': (BuildContext context) => new AppbarPage(),
         'MaterialListPage': (BuildContext context) => new MaterialListPage(),
         'CupertinoListPage': (BuildContext context) => new CupertinoListPage(),
@@ -60,7 +59,6 @@ class MyApp extends StatelessWidget {
         'OpacityPage': (BuildContext context) => new OpacityPage(),
         'AnimationPage': (BuildContext context) => new AnimationPage(),
         'PageJumpAnimationPage': (BuildContext context) => new PageJumpAnimationPage(),
-
         'SignaturePage': (BuildContext context) => new SignaturePage(),
 
       },
@@ -109,7 +107,6 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("LongListPage"));
     widgets.add(_getListItem("GridViewPage"));
     widgets.add(_getListItem("FormPage"));
-
     widgets.add(_getListItem("AppbarPage"));
     widgets.add(_getListItem("MaterialListPage"));
     widgets.add(_getListItem("CupertinoListPage"));
@@ -118,7 +115,6 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("OpacityPage"));
     widgets.add(_getListItem("AnimationPage"));
     widgets.add(_getListItem("PageJumpAnimationPage"));
-
     widgets.add(_getListItem("SignaturePage"));
 
     return widgets;
