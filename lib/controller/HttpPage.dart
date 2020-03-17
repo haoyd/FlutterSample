@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:io';
 
@@ -31,10 +30,10 @@ class HttpPage extends StatelessWidget {
 
   _httpRequest() {
     var url = 'http://www.baidu.com';
-    http.get(url).then((response) {
-      print("状态码：${response.statusCode}");
-      print("正文：${response.body}");
-    });
+//    http.get(url).then((response) {
+//      print("状态码：${response.statusCode}");
+//      print("正文：${response.body}");
+//    });
   }
 
   _httpClientRequest() async {
