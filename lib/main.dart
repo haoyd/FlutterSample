@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_sample/view/widget/ToastUtil.dart';
 
 import 'controller/ContainerPage.dart';
@@ -9,6 +8,7 @@ import 'controller/IconsPage.dart';
 import 'controller/ImagePage.dart';
 import 'controller/ListViewPage.dart';
 import 'controller/RaisedButtonPage.dart';
+import 'controller/SignaturePage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
 import 'controller/ThemePage.dart';
@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         'RaisedButtonPage': (BuildContext context) => new RaisedButtonPage(),
         'ListViewPage': (BuildContext context) => new ListViewPage(),
         'FormPage': (BuildContext context) => new FormPage(),
+        'SignaturePage': (BuildContext context) => new SignaturePage(),
       },
     );
   }
@@ -67,7 +68,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
 
     widgets.add(_getListItem("UrlPage", () {
       const url = 'https://www.baidu.com';
-      launch(url);
+//      launch(url);
     }));
 
     widgets.add(_getListItem("ThemePage"));
@@ -79,6 +80,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("RaisedButtonPage"));
     widgets.add(_getListItem("ListViewPage"));
     widgets.add(_getListItem("FormPage"));
+    widgets.add(_getListItem("SignaturePage"));
 
     return widgets;
   }
