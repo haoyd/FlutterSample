@@ -72,8 +72,7 @@ class _SignaturePageState extends State<SignaturePage> {
           ),
           Row(
             children: <Widget>[
-              RaisedButton(
-                color: Theme.of(context).primaryColor,
+              ElevatedButton(
                 onPressed: () async {
                   setState(() {
                     _points?.clear();
@@ -87,8 +86,7 @@ class _SignaturePageState extends State<SignaturePage> {
                 ),
               ),
               Expanded(child: Container()),
-              RaisedButton(
-                color: Theme.of(context).primaryColor,
+              ElevatedButton(
                 onPressed: () async {
                   File toFile = await _saveImageToFile();
                   String toPath = await _capturePng(toFile);

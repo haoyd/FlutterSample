@@ -35,9 +35,9 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
 
   _getBottomNaviItems() {
     List<BottomNavigationBarItem> items = [];
-    items.add(BottomNavigationBarItem(icon: Icon(Icons.chat), title: Text('信息')));
-    items.add(BottomNavigationBarItem(icon: Icon(Icons.contacts), title: Text('通讯录')));
-    items.add(BottomNavigationBarItem(icon: Icon(Icons.account_circle), title: Text('发现')));
+    items.add(BottomNavigationBarItem(icon: Icon(Icons.chat), activeIcon: Text('信息')));
+    items.add(BottomNavigationBarItem(icon: Icon(Icons.contacts), activeIcon: Text('通讯录')));
+    items.add(BottomNavigationBarItem(icon: Icon(Icons.account_circle), activeIcon: Text('发现')));
     return items;
   }
 

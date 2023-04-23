@@ -34,11 +34,11 @@ class DialogPage extends StatelessWidget {
                 content: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                    RaisedButton (
+                    ElevatedButton (
                       onPressed: () {},
                       child: Text('确定'),
                     ),
-                    RaisedButton (
+                    ElevatedButton (
                       onPressed: () {},
                       child: Text('取消'),
                     ),
@@ -52,6 +52,6 @@ class DialogPage extends StatelessWidget {
   }
 
   void showSnackBar(String message) {
-    _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(message)));
+    // _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(message)));
   }
 }

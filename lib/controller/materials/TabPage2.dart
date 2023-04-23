@@ -58,7 +58,7 @@ class SelectedView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    final TextStyle textStyle = Theme.of(context).textTheme.display1;
+    final TextStyle textStyle = Theme.of(context).textTheme.displayMedium;
 
     return Card(
       color: Colors.white,

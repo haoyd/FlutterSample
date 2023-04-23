@@ -15,10 +15,8 @@ class ButtonPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
-            FlatButton(
+            ElevatedButton(
               child: Text('I am FlatButton'),
-              color: Colors.lightBlue,
-              textColor: Colors.red,
               onPressed: () {
                 showSnackBar('您点击了FlatButton');
               },
@@ -52,7 +50,7 @@ class ButtonPage extends StatelessWidget {
   }
 
   void showSnackBar(String message) {
-    _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(message)));
+    // _scaffoldKey.currentState.showSnackBar(SnackBar(content: Text(message)));
   }
 }
 

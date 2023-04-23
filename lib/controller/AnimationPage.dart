@@ -29,7 +29,7 @@ class _AnimationPageState extends State<AnimationPage> {
                 duration: Duration(milliseconds: 3000),
                 child: box,
               ),
-              RaisedButton(
+              ElevatedButton(
                 child: Text('执行动画'),
                 onPressed: _startAnimation,
               )

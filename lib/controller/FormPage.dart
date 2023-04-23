@@ -48,7 +48,7 @@ class _LoginPageState extends State<FormPage> {
               SizedBox(
                 width: double.infinity,
                 height: 42.0,
-                child: RaisedButton(
+                child: ElevatedButton(
                   onPressed: login,
                   child: Text('登录', style: TextStyle(fontSize: 18.0),),
                 ),

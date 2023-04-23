@@ -27,11 +27,11 @@ class _MyPageState extends State<MyPage> {
           //选项卡项 包含图标及文字
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.home),
-            title: Text('主页'),
+            activeIcon: Text('主页'),
           ),
           BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.conversation_bubble),
-            title: Text('聊天'),
+            activeIcon: Text('聊天'),
           ),
         ],
       ),

@@ -28,13 +28,13 @@ class _JumpOrignPageState extends State<JumpOrignPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text('页面返回结果：$_result'),
-            RaisedButton(
+            ElevatedButton(
               child: Text('简单页面跳转'),
               onPressed: () {
                 Navigator.of(_context).push(new MaterialPageRoute(builder: (context) => SecondJumpPage(question: '')));
               },
             ),
-            RaisedButton(
+            ElevatedButton(
               child: Text('带参数跳转'),
               onPressed: () {
                 _navigateToSecondPageAndWaitForResult(_context);

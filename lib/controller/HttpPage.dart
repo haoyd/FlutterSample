@@ -14,11 +14,11 @@ class HttpPage extends StatelessWidget {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new RaisedButton(
+            new ElevatedButton(
                 onPressed: _httpRequest,
                 child: new Text("Http请求网络"),
             ),
-            new RaisedButton(
+            new ElevatedButton(
                 onPressed: _httpClientRequest,
                 child: new Text("HttpClient请求网络"),
             ),

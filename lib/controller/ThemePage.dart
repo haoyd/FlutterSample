@@ -14,7 +14,7 @@ class ThemePage extends StatelessWidget {
           color: Theme.of(context).accentColor,
           child: new Text(
             '带有背景颜色的文本组件',
-            style: Theme.of(context).textTheme.title,
+            style: Theme.of(context).textTheme.bodyMedium,
           ),
         ),
       ),

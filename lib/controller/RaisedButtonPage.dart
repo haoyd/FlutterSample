@@ -9,11 +9,11 @@ class RaisedButtonPage extends StatelessWidget {
     return new Scaffold(
       appBar: AppBar(title: Text("突起的按钮"),),
       body: Center(
-        child: RaisedButton(
+        child: ElevatedButton(
             onPressed: (){
               ToastUtil.show("按下按钮");
             },
-            child: Text('RaisedButton组件'),
+            child: Text('ElevatedButton组件'),
          ),
       ),
     );

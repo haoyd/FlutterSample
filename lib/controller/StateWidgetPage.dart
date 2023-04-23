@@ -34,7 +34,7 @@ class _MyStatePageState extends State<StateWidgetPage> {
             new Text('你点击按钮的次数：'),
             new Text(
                 '$_counter',
-                style: Theme.of(context).textTheme.display1,
+                style: Theme.of(context).textTheme.displayMedium,
             )
           ],
         ),

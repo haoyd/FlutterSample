@@ -16,7 +16,7 @@ class SecondJumpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text('接收传递值：' + question ?? ''),
-              RaisedButton(
+              ElevatedButton(
                 child: Text('返回值'),
                 onPressed: () {
                   Navigator.pop(context, question != null ? '西红柿' : '');
