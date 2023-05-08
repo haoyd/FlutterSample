@@ -47,8 +47,33 @@ class TextPage extends StatelessWidget {
                   TextSpan(text: '样式', style: TextStyle(color: Colors.yellow)),
                 ],
               ),
-            )
-
+            ),
+            Container(
+              decoration: BoxDecoration(
+                border: Border.all(color: Colors.blue),
+              ),
+              child: DefaultTextStyle(
+                //1.设置文本默认样式
+                style: TextStyle(
+                  color:Colors.red,
+                  fontSize: 20.0,
+                ),
+                textAlign: TextAlign.start,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text("默认样式 - 使用默认"),
+                    Text("默认样式 - 使用默认"),
+                    Text("默认样式 - 自定义样式",
+                      style: TextStyle(
+                          inherit: false, //2.不继承默认样式
+                          color: Colors.grey
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
           ],
         ),
       ),
