@@ -38,6 +38,16 @@ class TextPage extends StatelessWidget {
                 letterSpacing: 6.0,
               ),
             ),
+            RichText(
+              text: TextSpan(
+                children: <TextSpan>[
+                  TextSpan(text: '一行', style: TextStyle(color: Colors.red)),
+                  TextSpan(text: '文本', style: TextStyle(color: Colors.blue)),
+                  TextSpan(text: '多种', style: TextStyle(color: Colors.green)),
+                  TextSpan(text: '样式', style: TextStyle(color: Colors.yellow)),
+                ],
+              ),
+            )
 
           ],
         ),
