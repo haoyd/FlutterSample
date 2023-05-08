@@ -35,14 +35,14 @@ subprojects {
     project.buildDir = "${rootProject.buildDir}/${project.name}"
     project.evaluationDependsOn(':app')
 
-    project.configurations.all {
-        resolutionStrategy.eachDependency { details ->
-            if (details.requested.group == 'androidx.lifecycle'
-                    && !details.requested.name.contains('lifecycle-runtime')) {
-                details.useVersion "2.0.0"
-            }
-        }
-    }
+//    project.configurations.all {
+//        resolutionStrategy.eachDependency { details ->
+//            if (details.requested.group == 'androidx.lifecycle'
+//                    && !details.requested.name.contains('lifecycle-runtime')) {
+//                details.useVersion "2.0.0"
+//            }
+//        }
+//    }
 }
 
 task clean(type: Delete) {
