@@ -14,7 +14,7 @@ import 'controller/ListViewPage.dart';
 import 'controller/LongListPage.dart';
 import 'controller/OpacityPage.dart';
 import 'controller/PageJumpAnimationPage.dart';
-import 'controller/RaisedButtonPage.dart';
+import 'controller/ButtonPage.dart';
 import 'controller/SignaturePage.dart';
 import 'controller/StateWidgetPage.dart';
 import 'controller/TextPage.dart';
@@ -45,7 +45,7 @@ class MyApp extends StatelessWidget {
         'ImagePage': (BuildContext context) => new ImagePage(),
         'TextPage': (BuildContext context) => new TextPage(),
         'IconsPage': (BuildContext context) => new IconsPage(),
-        'RaisedButtonPage': (BuildContext context) => new RaisedButtonPage(),
+        'ButtonPage': (BuildContext context) => new ButtonPage(),
         'ListViewPage': (BuildContext context) => new ListViewPage(),
         'HorizontalListPage': (BuildContext context) => new HorizontalListPage(),
         'LongListPage': (BuildContext context) => new LongListPage(),
@@ -101,7 +101,7 @@ class _SampleAppPageState extends State<SampleAppPage> {
     widgets.add(_getListItem("ImagePage"));
     widgets.add(_getListItem("TextPage"));
     widgets.add(_getListItem("IconsPage"));
-    widgets.add(_getListItem("RaisedButtonPage"));
+    widgets.add(_getListItem("ButtonPage"));
     widgets.add(_getListItem("ListViewPage"));
     widgets.add(_getListItem("HorizontalListPage"));
     widgets.add(_getListItem("LongListPage"));
